@@ -17,7 +17,6 @@ html {
 }
 body {
     font-family: 'Open Sans', sans-serif;;
-    background-color: black;
 }
 ul {
     list-style: none;
@@ -48,6 +47,48 @@ ul {
     }
 }
 /* * End Global rules  */
+/* * Start component  */
+.main-heading {
+    text-align: center;
+}
+.main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+
+}
+.main-heading h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    background-color: #333;
+    bottom: -30px;
+    transform: translateX(-50px);
+    height: 4px;
+    width: 120px;
+}
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 14px;
+    height: 14px;
+    border: solid #333 2px;
+    border-radius: 50%;
+    background-color: white;
+    bottom: -35px;
+}
+.main-heading p {
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+/* * End components  */
 /* * start header  */
 header {
     position: absolute;
@@ -168,6 +209,14 @@ header nav .forum i {
     display: flex;
     justify-content: flex-end;
 }
+@media (max-width: 768px) {
+    .landing .text {
+        width: 100%;
+    }
+    .landing .text .content {
+        max-width: 100%;
+    }
+}
 .landing .text .content {
     max-width: 500px;
 }
@@ -181,4 +230,43 @@ header nav .forum i {
     font-size: 14px;
     line-height: 2;
 }
+.landing .change-background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ddd;
+}
+@media (max-width: 768px) {
+    .landing .change-background {
+        display: none;
+    }
+
+}
+.landing .fa-angle-right {
+    right: 25px;
+}
+.landing .fa-angle-left {
+    left: 25px;
+}
+.landing .bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+
+}
+.landing .bullets li  {
+    width: 20px;
+    height: 20px;
+    border: solid white 1px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+.landing .bullets li.active  {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+
+} 
 /* * End landing  */
