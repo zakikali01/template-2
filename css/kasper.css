@@ -1,3 +1,8 @@
+/* * Start Global Variables */
+:root {
+    --main-color: #19c8fa;
+}
+/* * End Global Variables */
 /* * Start Globla rules */
 * {
     -webkit-box-sizing: border-box;
@@ -58,7 +63,7 @@ header .container::after {
     width: calc(100% - 30px);
     height: 1px;
     background-color: #a2a2a2;
-    bottom: 0px;
+    bottom: -1px;
     left: 15px;
 }
 header .logo img {
@@ -66,5 +71,40 @@ header .logo img {
 }
 header nav {
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+    padding: 40px 10px;
+}
+header nav ul li a.active, 
+header nav ul li a:hover {
+    color: var(--main-color);
+    border-bottom: solid var(--main-color) 1px;
+} 
+header nav .forum {
+    width: 40px;
+    height: 30px;
+    margin-left: 30px;
+    position: relative;
+    border-left: solid 1px white;
+}
+header nav .forum i {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
 }
 /* * end header  */
