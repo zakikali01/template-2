@@ -1,6 +1,7 @@
 /* * Start Global Variables */
 :root {
     --main-color: #19c8fa;
+    --transparent-color: #0f738fb3;
 }
 /* * End Global Variables */
 /* * Start Globla rules */
@@ -139,3 +140,45 @@ header nav .forum i {
     left: 10px;
 }
 /* * end header  */
+/* * Start landing  */
+.landing {
+    min-height: 100vh;
+    background-color: #f6f6f6;
+    background-image: url(../imgs/landing.jpg);
+    background-size: cover;
+    position: relative;
+}
+.landing .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 65%);
+}
+.landing .text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 50px;
+    background-color: var(--transparent-color);
+    color: white;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.landing .text .content {
+    max-width: 500px;
+}
+.landing .text .content h2 {
+    font-weight: normal;
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.landing .text .content p {
+    font-size: 14px;
+    line-height: 2;
+}
+/* * End landing  */
