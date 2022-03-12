@@ -442,3 +442,48 @@ header nav .forum i {
     display: block;
 }
 /* * End Portfolio */
+/* * Start Video  */
+.video {
+   position: relative; 
+}
+.video::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 65%);
+}
+.video video {
+    width: 100%;
+}
+.video .text {
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+    text-align: center;
+} 
+.video .text p {
+    margin-bottom: 30px;
+}
+.video .text h2 {
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.video .text button {
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+}
+    
+/* * End Video  */
