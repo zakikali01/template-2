@@ -363,8 +363,9 @@ header nav .forum i {
     padding: 15px 0;
 }
 .desing .text ul li::before {
+    position: absolute;
     font-family: "'Font Awesome 5 Free'";
-    content: "\e163";
+    content: "\f390";
     margin-right: 20px;
 }
 /* * End Design section  */
@@ -687,3 +688,40 @@ header nav .forum i {
     top: -15px;
 }
 /* * End Skills  */
+/* * Start quote */
+.quote {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../imgs/quoate.jpg);
+    background-size: cover ;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.quote::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0 / 75%);
+}
+.quote .container {
+    position: relative;
+}
+.quote q {
+    font-size:30px;
+    margin-bottom: 20px;
+    display: block;
+}
+.quote q::before {
+    content: "\f10d";
+}
+.quote q::after {
+    content: "\f10e";
+}
+.quote .container span {
+    text-transform: uppercase;
+}
+/* * End quote */
